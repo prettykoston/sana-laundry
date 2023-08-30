@@ -1,0 +1,16 @@
+.phone-icon {
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--small {
+    background-image: url("/img/common/phone-icon-small.svg");
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  &--medium {
+    background-image: url("/img/common/phone-icon-medium.svg");
+    height: 5.6rem;
+    width: 5.6rem;
+  }
+}

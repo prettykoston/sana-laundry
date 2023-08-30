@@ -1,0 +1,22 @@
+html {
+  font-size: 0.521vw; // 10px для 1920px
+
+  @include respond(tab-landscape) {
+    font-size: 0.781vw;
+  }
+
+  /*  
+  font-size: 62.5%; 
+  
+  @include respond(desktop) {
+    font-size: 0.521vw; // 10px для 1920px
+  }*/
+}
+
+.main-wrapper {
+  padding: 0 17.2rem;
+
+  @include respond(tab-landscape) {
+    padding: 0 11.8rem;
+  }
+}

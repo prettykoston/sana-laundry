@@ -1,0 +1,60 @@
+/* MEDIA QUERY MANAGER
+0    - 320px:  Phone
+320  - 380px:  Wide phone
+380  - 768px:  Tablet Portrait Mode
+768  - 1280px:  Tablet Landscape Mode, Notebook
+1280  - 1920px: Desktop;
+1920px+      : Wide Desktop;
+
+ Breakpoint argument choices:
+- phone
+- wide-phone
+- tab-portrait
+- tab-landscape
+- desktop
+- wide-desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 20em) {
+      // < 320px
+      @content;
+    }
+  }
+
+  @if $breakpoint == wide-phone {
+    @media only screen and (max-width: 23.75em) {
+      // < 380px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-portrait {
+    @media only screen and (max-width: 48em) {
+      // < 768px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-landscape {
+    @media only screen and (max-width: 80em) {
+      // < 1280px
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: 120em) {
+      // < 1920px
+      @content;
+    }
+  }
+
+  @if $breakpoint == wide-desktop {
+    @media only screen and (min-width: 120em) {
+      // > 1920px
+      @content;
+    }
+  }
+}
