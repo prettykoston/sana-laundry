@@ -58,3 +58,10 @@
     }
   }
 }
+
+
+@mixin background-contain-center {
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

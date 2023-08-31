@@ -1,0 +1,142 @@
+.header-slider {
+  width: 100%;
+  height: 56rem;
+  border-radius: 5.6rem;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.25);
+
+  @include respond(tab-landscape) {
+    height: 49.3rem;
+  }
+
+  @include respond(tab-portrait) {
+    height: 44.2rem;
+  }
+
+  &__pagination {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10rem;
+  }
+
+  &__slide-bubbles-shape {
+    position: absolute;
+    right: 15rem;
+    bottom: 0;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/header/slider/bubbles-bottom-right.png");
+
+    width: 23.8rem;
+    height: 19.7rem;
+  }
+}
+
+.header-slider__slide {
+  display: grid;
+  position: relative;
+  grid-template-columns: 53rem 1fr;
+  grid-template-rows: repeat(3, 1fr);
+
+  padding: 0 2.8rem 0 16rem;
+  background-color: var(--clr-grey-light);
+
+  @include respond(tab-landscape) {
+    grid-template-columns: 45.8rem 1fr;
+  }
+
+  @include respond(tab-portrait) {
+    grid-template-columns: 36.8rem 1fr;
+
+    padding: 0 2.8rem 0 12.8rem;
+  }
+
+  h2 {
+    position: relative;
+    color: var(--clr-blue-default);
+    font-size: var(--font-size-large-2);
+    line-height: 4.2rem;
+    top: 3.42rem;
+    align-self: self-end;
+
+    @include respond(tab-landscape) {
+      top: 1.15rem;
+    }
+
+    @include respond(tab-portrait) {
+      font-size: var(--font-size-large-5);
+      top: 2rem;
+      line-height: 3.6rem;
+    }
+  }
+
+  p {
+    position: relative;
+    align-self: center;
+    line-height: 2.4rem;
+    bottom: -1.8rem;
+
+    @include respond(tab-portrait) {
+      font-size: var(--font-size-small-1);
+      bottom: -1.2rem;
+    }
+  }
+
+  button {
+    top: 3.7rem;
+
+    @include respond(tab-landscape) {
+      top: 6.02rem;
+    }
+
+    @include respond(tab-portrait) {
+      top: 3.14rem;
+    }
+  }
+
+  &-img--1 {
+    position: relative;
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("/img/header/slider/slider-img-1.png");
+    right: 9.5rem;
+    top: 0.4rem;
+
+    @include respond(tab-landscape) {
+      right: 7.6rem;
+      top: 6.1rem;
+      background-size: cover;
+      height: 43.2rem;
+      width: 63rem;
+    }
+
+    @include respond(tab-portrait) {
+      height: 34.8rem;
+      width: 53rem;
+
+      right: 7.9rem;
+      top: 9.4rem;
+    }
+  }
+
+  i {
+    position: absolute;
+    top: -8rem;
+    left: 0;
+    color: var(--clr-blue-transparent);
+    font-size: 40rem;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+/*   .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */

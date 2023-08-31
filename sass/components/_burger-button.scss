@@ -1,0 +1,21 @@
+.burger-button {
+  display: flex;
+  width: 5.6rem;
+  height: 5.6rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-blue-default);
+  border-radius: 6rem;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+
+  &__icon {
+    height: 3.73rem;
+    width: 3.73rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/img/header/burger-icon.svg");
+  }
+}

@@ -7,10 +7,15 @@
 @import "base/typography";
 
 @import "components/logo";
+@import "components/burger-button";
 @import "components/phone-icon";
 @import "components/cart";
+@import "components/btn";
 @import "components/services-drop-menu";
-
+@import "../node_modules/swiper/swiper.scss";
+@import "../node_modules/swiper/modules/navigation.scss";
+@import "../node_modules/swiper/modules/pagination.scss";
+@import "components/header-slider.scss";
 
 @import "layouts/header";
-
+@import "layouts/section-solutions";

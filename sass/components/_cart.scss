@@ -9,6 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   &__icon {
     background-image: url("/img/header/cart-icon.svg");
@@ -29,5 +30,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    span {
+      @include respond(tab-portrait) {
+        position: relative;
+        bottom: 0.2rem;
+        right: 0.2rem;
+      }
+    }
+
+    @include respond(tab-landscape) {
+      top: -0.18rem;
+    }
+
+    @include respond(tab-portrait) {
+      top: 0rem;
+    }
   }
 }

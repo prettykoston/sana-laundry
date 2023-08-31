@@ -1,23 +1,40 @@
 .services-drop-menu {
   position: absolute;
   display: none;
+  padding: 4.8rem 10rem 4.8rem 3.2rem;
   gap: 7.1rem;
   top: 13rem;
   left: 67rem;
-  padding: 4.8rem 10rem 4.8rem 3.2rem;
 
   border-radius: 2.4rem;
   background-color: #fff;
+
+  z-index: 2;
+
+  @include respond(tab-landscape) {
+    top: 20rem;
+    left: 6rem;
+  }
+
+  @include respond(tab-portrait) {
+    top: 0;
+    left: 0;
+    padding: 4rem 4rem 2rem 0rem;
+  }
+
+  &--active {
+    display: flex;
+  }
 
   &::before {
     content: url("/img/header/vector-up.svg");
     position: absolute;
     top: -1.8rem;
     left: 8rem;
-  }
 
-  &--active {
-    display: flex;
+    @include respond(tab-portrait) {
+      display: none;
+    }
   }
 
   &__list,
@@ -63,5 +80,24 @@
   &__sublist {
     display: none;
     gap: 2.4rem;
+  }
+
+  &__back-icon {
+    display: none;
+
+    @include respond(tab-portrait) {
+      position: absolute;
+      display: block;
+      height: 2.4rem;
+      width: 2.4rem;
+      top: 2rem;
+      left: 1rem;
+      cursor: pointer;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("/img/header/arrow-right-dark.svg");
+      transform: rotate(180deg);
+    }
   }
 }

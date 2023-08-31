@@ -2,7 +2,11 @@ html {
   font-size: 0.521vw; // 10px для 1920px
 
   @include respond(tab-landscape) {
-    font-size: 0.781vw;
+    font-size: 0.781vw; //10 px для 1280
+  }
+
+  @include respond(tab-portrait) {
+    font-size: 1.302vw; //10 px для 768
   }
 
   /*  
@@ -17,6 +21,10 @@ html {
   padding: 0 17.2rem;
 
   @include respond(tab-landscape) {
-    padding: 0 11.8rem;
+    padding: 0 12.05rem;
+  }
+
+  @include respond(tab-portrait) {
+    padding: 0 1.2rem;
   }
 }

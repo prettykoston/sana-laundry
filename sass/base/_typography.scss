@@ -1,6 +1,5 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap'); */
 
-
 body {
   font-family: var(--font-family-default);
   font-size: var(--font-size-default);
@@ -10,3 +9,14 @@ body {
   cursor: default;
 }
 
+.heading {
+  &--h3 {
+    font-size: var(--font-size-large-5);
+    font-weight: 700;
+    line-height: 4.2rem;
+  }
+}
+
+.blue-text {
+  color: var(--clr-blue-default);
+}

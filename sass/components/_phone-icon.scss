@@ -12,5 +12,18 @@
     background-image: url("/img/common/phone-icon-medium.svg");
     height: 5.6rem;
     width: 5.6rem;
+
+    @include respond(tab-landscape) {
+      position: relative;
+      scale: 1.16;
+      top: 0.2rem;
+      left: 0.05rem;
+    }
+
+    @include respond(tab-portrait) {
+      scale: 1.15;
+      top: 0.2rem;
+      left: 0.1rem;
+    }
   }
 }
