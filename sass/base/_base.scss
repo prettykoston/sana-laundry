@@ -2,11 +2,15 @@ html {
   font-size: 0.521vw; // 10px для 1920px
 
   @include respond(tab-landscape) {
-    font-size: 0.781vw; //10 px для 1280
+    font-size: 0.784vw; //10 px для 1275
   }
 
   @include respond(tab-portrait) {
     font-size: 1.302vw; //10 px для 768
+  }
+
+  @include respond(phone) {
+    font-size: 3.125vw; //10 px для 320
   }
 
   /*  

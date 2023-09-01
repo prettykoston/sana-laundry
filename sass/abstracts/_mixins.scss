@@ -1,14 +1,12 @@
 /* MEDIA QUERY MANAGER
 0    - 320px:  Phone
-320  - 380px:  Wide phone
-380  - 768px:  Tablet Portrait Mode
+320  - 768px:  Tablet Portrait Mode
 768  - 1280px:  Tablet Landscape Mode, Notebook
 1280  - 1920px: Desktop;
 1920px+      : Wide Desktop;
 
  Breakpoint argument choices:
 - phone
-- wide-phone
 - tab-portrait
 - tab-landscape
 - desktop
@@ -23,13 +21,6 @@
     }
   }
 
-  @if $breakpoint == wide-phone {
-    @media only screen and (max-width: 23.75em) {
-      // < 380px
-      @content;
-    }
-  }
-
   @if $breakpoint == tab-portrait {
     @media only screen and (max-width: 48em) {
       // < 768px
@@ -38,8 +29,8 @@
   }
 
   @if $breakpoint == tab-landscape {
-    @media only screen and (max-width: 80em) {
-      // < 1280px
+    @media only screen and (max-width: 79.6875em) {
+      // < 1275px
       @content;
     }
   }
@@ -59,9 +50,8 @@
   }
 }
 
-
 @mixin background-contain-center {
   background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

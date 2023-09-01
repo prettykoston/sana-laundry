@@ -1,13 +1,32 @@
-.section-solutions {
-  //   height: 76.1rem;
-  height: 150rem;
+/* 
+General, pictures and download button
+*/
+
+.section-about {
+  height: 76.1rem;
   position: relative;
 
   display: grid;
-  grid-template-columns: 0.6fr 1fr;
+  grid-template-columns: 59rem 1fr;
   column-gap: 21rem;
+  padding-top: 9.4rem;
 
-  padding-top: 8.9rem;
+  box-shadow: 0px 16px 4px -16px rgba(0, 0, 0, 0.15);
+
+  @include respond(tab-landscape) {
+    grid-template-columns: 17.6rem 1fr;
+  }
+
+  @include respond(tab-portrait) {
+    height: 63.4rem;
+    grid-template-columns: 1fr;
+    padding: 7.9rem 13rem 0 8.96rem;
+  }
+
+  @include respond(phone) {
+    padding: 0;
+    display: none;
+  }
 
   &__circle-shape {
     @include background-contain-center;
@@ -16,6 +35,39 @@
     width: 73.2rem;
     height: 73.2rem;
     position: absolute;
+
+    top: 5rem;
+    left: -10.3rem;
+
+    @include respond(tab-landscape) {
+      width: 52rem;
+      height: 52rem;
+      top: 10.4rem;
+      left: -13.1rem;
+    }
+
+    &--1 {
+      @include respond(tab-portrait) {
+        width: 36.2rem;
+        height: 36.2rem;
+        top: -1rem;
+        left: -26.5rem;
+      }
+    }
+
+    &--2 {
+      display: none;
+
+      @include respond(tab-portrait) {
+        display: block;
+        background-size: cover;
+        top: 43.8rem;
+        left: 59.8rem;
+        width: 36.2rem;
+        height: 27.6rem;
+        background-position: top;
+      }
+    }
   }
 
   &__woman-img {
@@ -24,35 +76,130 @@
 
     width: 64.5rem;
     height: 64.5rem;
+
+    position: relative;
+    top: 2.2rem;
+    right: 1.6rem;
+
+    @include respond(tab-landscape) {
+      width: 58.5rem;
+      height: 58.5rem;
+      top: -0.8rem;
+      right: 13rem;
+    }
+
+    @include respond(tab-portrait) {
+      display: none;
+    }
   }
 
-  &__dwnld-price-button::after {
-    background-image: url("/img/common/download-icon.svg");
+  &__dwnld-price-button {
+    width: 18.8rem;
+    height: 4.8rem;
+
+    padding: 0.8rem 6.4rem 0.8rem 1.6rem;
+    position: relative;
+    top: 0.5rem;
+
+    @include respond(tab-landscape) {
+      top: -0.3rem;
+      right: -3.8rem;
+    }
+
+    &::after {
+      background-image: url("/img/common/download-icon.svg");
+    }
   }
 }
 
-.section-solutions__text-container article {
+/* 
+Text block
+*/
+.section-about__text-container article {
   h6 {
     color: var(--clr-blue-default);
     font-style: normal;
     font-size: var(--font-size-default);
     font-weight: 500;
+    position: relative;
+    bottom: 0.25rem;
+
+    @include respond(tab-landscape) {
+      bottom: 0.4rem;
+    }
+
+    @include respond(tab-portrait) {
+      margin-bottom: 2rem;
+    }
+
+    @include respond(phone) {
+    }
+  }
+
+  h3 {
+    margin-bottom: 6.4rem;
+    position: relative;
+
+    @include respond(tab-landscape) {
+      margin-bottom: 5.5rem;
+    }
+
+    @include respond(tab-portrait) {
+      font-size: var(--font-size-medium-1);
+      line-height: 3.25rem;
+      max-width: 48rem;
+      margin-bottom: 3.2rem;
+      bottom: 2.2rem;
+      margin-bottom: -0.4rem;
+    }
+  }
+
+  h6,
+  h3 {
+    @include respond(tab-landscape) {
+      left: 3.85rem;
+    }
   }
 
   p {
     font-weight: 300;
-    line-height: 2.4rem; /* 150% */
+    line-height: 2.4rem;
+    margin-bottom: 2.96rem;
+    padding-left: 4rem;
+
+    @include respond(tab-portrait) {
+      margin-bottom: 3.75rem;
+    }
   }
 
   ul {
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    gap: 1.12rem;
     width: 37.6rem;
+    margin-bottom: 6.4rem;
+    padding: 0;
+    padding-left: 4rem;
+
+    @include respond(tab-portrait) {
+      margin-bottom: 4.1rem;
+    }
+  }
+
+  p,
+  ul {
+    @include respond(tab-landscape) {
+      padding-left: 3.8rem;
+    }
+
+    @include respond(tab-portrait) {
+      font-size: var(--font-size-small-1);
+      padding-left: 3.85rem;
+    }
   }
 }
 
-.section-solutions__list-item {
+.section-about__list-item {
   list-style-type: none;
   display: flex;
   gap: 0.8rem;
@@ -63,6 +210,20 @@
     width: 2.4rem;
     height: 2.4rem;
     @include background-contain-center;
+  }
+
+  &--1,
+  &--3 {
+    position: relative;
+  }
+
+  &--1 {
+    bottom: 0.55rem;
+    line-height: 2.36rem;
+  }
+
+  &--3 {
+    top: 0.45rem;
   }
 
   &--1::before {

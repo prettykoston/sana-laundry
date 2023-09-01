@@ -10,6 +10,11 @@
 
   cursor: pointer;
 
+  @include respond(phone) {
+    width: 4rem;
+    height: 4rem;
+  }
+
   &__icon {
     height: 3.73rem;
     width: 3.73rem;
@@ -17,5 +22,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("/img/header/burger-icon.svg");
+
+    @include respond(phone) {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
   }
 }
