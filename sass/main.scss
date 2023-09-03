@@ -1,9 +1,9 @@
-@import "abstracts/mixins";
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
+@import "base/reset";
 @import "base/animations";
 @import "base/base";
-@import "base/reset";
 @import "base/typography";
 
 @import "components/logo";
@@ -19,4 +19,5 @@
 @import "components/header-slider.scss";
 
 @import "layouts/header";
-@import "layouts/section-solutions";
+@import "layouts/section-about";
+@import "layouts/section-professional";

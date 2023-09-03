@@ -12,11 +12,10 @@
     height: 44.2rem;
   }
 
-  &__pagination {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 10rem;
+  @include respond(phone) {
+    position: relative;
+    height: 43.6rem;
+    border-radius: 2.4rem;
   }
 
   &__slide-bubbles-shape {
@@ -30,6 +29,25 @@
 
     width: 23.8rem;
     height: 19.7rem;
+  }
+
+  &__pagination {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 10rem;
+  }
+
+  &__navigation {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+      z-index: inherit;
+    }
   }
 }
 
@@ -48,8 +66,14 @@
 
   @include respond(tab-portrait) {
     grid-template-columns: 36.8rem 1fr;
-
     padding: 0 2.8rem 0 12.8rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 24.8rem;
+    justify-content: center;
+    grid-template-rows: repeat(3, min-content);
+    padding: 0;
   }
 
   h2 {
@@ -69,6 +93,14 @@
       top: 2rem;
       line-height: 3.6rem;
     }
+
+    @include respond(phone) {
+      font-size: var(--font-size-medium-2);
+      z-index: 3;
+
+      line-height: 2.8rem;
+      top: 3.3rem;
+    }
   }
 
   p {
@@ -81,6 +113,11 @@
       font-size: var(--font-size-small-1);
       bottom: -1.2rem;
     }
+
+    @include respond(phone) {
+      padding: 0 0.8rem;
+      bottom: -1.4rem;
+    }
   }
 
   button {
@@ -92,6 +129,12 @@
 
     @include respond(tab-portrait) {
       top: 3.14rem;
+    }
+
+    @include respond(phone) {
+      width: 24.7rem;
+      top: 2.4rem;
+      padding: 0.8rem 7.1rem 0.8rem 0rem;
     }
   }
 
@@ -120,6 +163,10 @@
 
       right: 7.9rem;
       top: 9.4rem;
+    }
+
+    @include respond(phone) {
+      display: none;
     }
   }
 

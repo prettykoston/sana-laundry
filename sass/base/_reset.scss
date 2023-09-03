@@ -42,7 +42,8 @@ h1 {
   margin: 0.67em 0;
 }
 
-h3, h6 {
+h3,
+h6 {
   margin: 0;
 }
 
@@ -82,6 +83,10 @@ a {
   color: var(--clr-blue-dark);
   text-decoration: none;
   font-size: inherit;
+}
+
+ul {
+  list-style: none;
 }
 
 /**
