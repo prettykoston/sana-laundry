@@ -83,6 +83,7 @@
     line-height: 4.2rem;
     top: 3.42rem;
     align-self: self-end;
+    z-index: 1;
 
     @include respond(tab-landscape) {
       top: 1.15rem;
@@ -96,7 +97,6 @@
 
     @include respond(phone) {
       font-size: var(--font-size-medium-2);
-      z-index: 3;
 
       line-height: 2.8rem;
       top: 3.3rem;

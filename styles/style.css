@@ -1207,7 +1207,8 @@ body {
     font-size: var(--font-size-large-2);
     line-height: 4.2rem;
     top: 3.42rem;
-    align-self: self-end; }
+    align-self: self-end;
+    z-index: 1; }
     @media only screen and (max-width: 79.6875em) {
       .header-slider__slide h2 {
         top: 1.15rem; } }
@@ -1219,7 +1220,6 @@ body {
     @media only screen and (max-width: 20em) {
       .header-slider__slide h2 {
         font-size: var(--font-size-medium-2);
-        z-index: 3;
         line-height: 2.8rem;
         top: 3.3rem; } }
   .header-slider__slide p {
@@ -1333,7 +1333,9 @@ body {
       .header__nav-wrapper {
         grid-template-columns: max-content max-content 1fr max-content max-content;
         grid-template-rows: repeat(2, max-content);
-        row-gap: 1.2rem; } }
+        row-gap: 1.2rem;
+        margin-bottom: 0;
+        padding: 2.4rem 0 0.4rem 0; } }
     @media only screen and (max-width: 20em) {
       .header__nav-wrapper {
         grid-template-columns: repeat(3, max-content);
@@ -1342,6 +1344,12 @@ body {
         column-gap: 4.5rem; } }
   .header__slider {
     padding-bottom: 15rem; }
+    @media only screen and (max-width: 79.6875em) {
+      .header__slider {
+        padding-bottom: 9.6rem; } }
+    @media only screen and (max-width: 48em) {
+      .header__slider {
+        padding-bottom: 2.35rem; } }
   .header__burger {
     display: none; }
     @media only screen and (max-width: 48em) {
@@ -1543,7 +1551,8 @@ General, pictures and download button
   box-shadow: 0px 16px 4px -16px rgba(0, 0, 0, 0.15); }
   @media only screen and (max-width: 79.6875em) {
     .section-about {
-      grid-template-columns: 17.6rem 1fr; } }
+      grid-template-columns: 17.6rem 1fr;
+      height: 58.1rem; } }
   @media only screen and (max-width: 48em) {
     .section-about {
       height: 63.4rem;
@@ -1551,7 +1560,8 @@ General, pictures and download button
       padding: 7.9rem 13rem 0 8.96rem; } }
   @media only screen and (max-width: 20em) {
     .section-about {
-      padding: 0; } }
+      padding: 0;
+      height: 76.9rem; } }
   .section-about__circle-shape {
     background-position: center;
     background-repeat: no-repeat;
@@ -1561,7 +1571,7 @@ General, pictures and download button
     height: 73.2rem;
     position: absolute;
     top: 5rem;
-    left: -10.3rem; }
+    left: 6.8rem; }
     @media only screen and (max-width: 79.6875em) {
       .section-about__circle-shape {
         width: 52rem;
@@ -1579,6 +1589,7 @@ General, pictures and download button
       @media only screen and (max-width: 48em) {
         .section-about__circle-shape--2 {
           display: block;
+          display: none;
           background-size: cover;
           top: 43.8rem;
           left: 59.8rem;
@@ -1721,7 +1732,11 @@ Paragraph and list of advantages
   @media only screen and (max-width: 20em) {
     .section-about__text-container article p,
     .section-about__text-container article ul {
-      padding-left: 0; } }
+      padding: 0; } }
+
+@media only screen and (max-width: 20em) {
+  .section-about__text-container {
+    padding: 0 1.2rem; } }
 
 /* 
 List items (separately incl)
@@ -1765,20 +1780,76 @@ List items (separately incl)
     background-image: url(/img/section-solutions/li-3.svg); }
 
 .section-professional {
-  height: 60rem;
+  height: 100rem;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: 12.4rem;
-  padding: 4.6rem 0 18.9rem 0;
-  background: var(--clr-grey-light-2); }
-  .section-professional ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); }
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr;
+  background: var(--clr-grey-light-2);
+  position: relative;
+  column-gap: 3.3rem;
+  overflow: hidden; }
+  @media only screen and (max-width: 79.6875em) {
+    .section-professional {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, min-content); } }
   .section-professional__heading {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    position: relative;
+    padding-top: 33.9rem;
     font-size: var(--font-size-large-1);
     font-weight: 700;
-    line-height: 6.4rem; }
+    line-height: 6.4rem;
+    white-space: nowrap; }
+    @media only screen and (max-width: 79.6875em) {
+      .section-professional__heading {
+        right: 0.2rem;
+        padding-top: 39.2rem; } }
+    @media only screen and (max-width: 48em) {
+      .section-professional__heading {
+        grid-row: 1 / 2;
+        grid-column: 1 / -1; } }
+    @media only screen and (max-width: 48em) {
+      .section-professional__heading {
+        font-size: var(--font-size-large-5);
+        padding-top: 6.9rem;
+        right: -10.4rem; } }
+  .section-professional ul {
+    grid-column: 2 / 3;
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 7.2rem;
+    padding-top: 21.1rem; }
+    @media only screen and (max-width: 79.6875em) {
+      .section-professional ul {
+        right: 37.1rem;
+        top: -3.11rem;
+        column-gap: 1.65rem; } }
+    @media only screen and (max-width: 48em) {
+      .section-professional ul {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        right: 0.8rem;
+        padding-top: 5.4rem; } }
+  .section-professional__circle-shape {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    width: 50.2rem;
+    height: 50.2rem;
+    position: absolute;
+    top: 6.7rem;
+    left: -11.8rem;
+    background-color: rgba(0, 0, 255, 0.5); }
+    @media only screen and (max-width: 48em) {
+      .section-professional__circle-shape {
+        top: 0.9rem;
+        left: -20.5rem;
+        width: 41.2rem;
+        height: 42.7rem;
+        display: none; } }
 
 /* 
 Bubbles advantages
@@ -1790,23 +1861,117 @@ Bubbles advantages
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 0.8rem;
-  text-align: center;
+  gap: 0.85rem;
+  position: relative;
+  right: 17.6rem;
   border-radius: 50%;
-  box-shadow: 0px 4px 40px 0px rgba(28, 39, 76, 0.24); }
+  box-shadow: 0px 4px 40px 0px rgba(28, 39, 76, 0.24);
+  text-align: center; }
+  @media only screen and (max-width: 48em) {
+    .section-professional__advantages-list li {
+      width: 14rem;
+      height: 14rem;
+      right: 0; } }
   .section-professional__advantages-list li div {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     width: 4.8rem;
-    height: 4.8rem; }
+    height: 4.8rem;
+    position: relative; }
   .section-professional__advantages-list li span {
-    padding: 0 2rem; }
-  .section-professional__advantages-list li:nth-child(1) div {
+    padding: 0 2rem;
+    position: relative;
+    letter-spacing: 0.1rem;
+    line-height: 2.1rem; }
+    @media only screen and (max-width: 48em) {
+      .section-professional__advantages-list li span {
+        letter-spacing: initial;
+        line-height: initial; } }
+
+/* 
+First bubble
+*/
+.section-professional__advantages-list li:first-child {
+  top: -10.9rem;
+  /* ICON */ }
+  @media only screen and (max-width: 48em) {
+    .section-professional__advantages-list li:first-child {
+      z-index: 1; } }
+  .section-professional__advantages-list li:first-child div {
     background-image: url("/img/section-professional/speaker-icon.svg"); }
+    @media only screen and (max-width: 48em) {
+      .section-professional__advantages-list li:first-child div {
+        top: 0.2rem; } }
+
+/* 
+Second bubble
+*/
+.section-professional__advantages-list li:nth-child(2) {
+  top: 1.4rem;
+  /* ICON */ }
+  @media only screen and (max-width: 79.6875em) {
+    .section-professional__advantages-list li:nth-child(2) {
+      top: 0.66rem; } }
   .section-professional__advantages-list li:nth-child(2) div {
     background-image: url("/img/section-professional/check-icon.svg"); }
+    @media only screen and (max-width: 48em) {
+      .section-professional__advantages-list li:nth-child(2) div {
+        top: 0.2rem; } }
+
+/* 
+Third bubble
+*/
+.section-professional__advantages-list li:nth-child(3) {
+  top: -9rem;
+  /* ICON */
+  /* TEXT */ }
+  @media only screen and (max-width: 79.6875em) {
+    .section-professional__advantages-list li:nth-child(3) {
+      top: -8.9rem; } }
   .section-professional__advantages-list li:nth-child(3) div {
+    top: -1rem;
     background-image: url("/img/section-professional/chat-like-icon.svg"); }
+    @media only screen and (max-width: 79.6875em) {
+      .section-professional__advantages-list li:nth-child(3) div {
+        left: -0.1rem; } }
+    @media only screen and (max-width: 48em) {
+      .section-professional__advantages-list li:nth-child(3) div {
+        top: -0.9rem;
+        left: 0; } }
+  .section-professional__advantages-list li:nth-child(3) span {
+    top: -1.2rem;
+    white-space: nowrap; }
+    @media only screen and (max-width: 48em) {
+      .section-professional__advantages-list li:nth-child(3) span {
+        top: -1rem; } }
+
+/* 
+Fourth bubble
+*/
+.section-professional__advantages-list li:nth-child(4) {
+  top: 7.1rem;
+  /* ICON */
+  /* TEXT */ }
+  @media only screen and (max-width: 79.6875em) {
+    .section-professional__advantages-list li:nth-child(4) {
+      top: 6.5rem; } }
   .section-professional__advantages-list li:nth-child(4) div {
+    top: -1.05rem;
     background-image: url("/img/section-professional/clock-icon.svg"); }
+    @media only screen and (max-width: 48em) {
+      .section-professional__advantages-list li:nth-child(4) div {
+        top: -0.9rem; } }
+  .section-professional__advantages-list li:nth-child(4) span {
+    top: -1.2rem;
+    white-space: nowrap; }
+    @media only screen and (max-width: 48em) {
+      .section-professional__advantages-list li:nth-child(4) span {
+        top: -1rem; } }
+
+@media only screen and (max-width: 48em) {
+  .section-professional__advantages-list li:nth-child(1),
+  .section-professional__advantages-list li:nth-child(2),
+  .section-professional__advantages-list li:nth-child(3),
+  .section-professional__advantages-list li:nth-child(4) {
+    top: 0; } }

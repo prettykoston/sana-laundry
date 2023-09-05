@@ -15,6 +15,7 @@ General, pictures and download button
 
   @include respond(tab-landscape) {
     grid-template-columns: 17.6rem 1fr;
+    height: 58.1rem;
   }
 
   @include respond(tab-portrait) {
@@ -25,6 +26,7 @@ General, pictures and download button
 
   @include respond(phone) {
     padding: 0;
+    height: 76.9rem;
   }
 
   &__circle-shape {
@@ -36,7 +38,7 @@ General, pictures and download button
     position: absolute;
 
     top: 5rem;
-    left: -10.3rem;
+    left: 6.8rem;
 
     @include respond(tab-landscape) {
       width: 52rem;
@@ -59,6 +61,8 @@ General, pictures and download button
 
       @include respond(tab-portrait) {
         display: block;
+        display: none;
+
         background-size: cover;
         top: 43.8rem;
         left: 59.8rem;
@@ -240,8 +244,14 @@ Paragraph and list of advantages
     }
 
     @include respond(phone) {
-      padding-left: 0;
+      padding: 0;
     }
+  }
+}
+
+.section-about__text-container {
+  @include respond(phone) {
+    padding: 0 1.2rem;
   }
 }
 
