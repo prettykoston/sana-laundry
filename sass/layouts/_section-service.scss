@@ -1,0 +1,89 @@
+/* 
+General, text and buttons
+ */
+
+.section-service {
+    height: 60rem;
+  display: grid;
+  grid-template-columns: 61.7rem 1fr;
+  grid-template-rows: repeat(3, max-content);
+  overflow: hidden;
+
+  &__heading {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: self-end;
+    position: relative;
+    top: -0.3rem;
+
+    span {
+      font-weight: 500;
+    }
+  }
+
+  &__desc {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    padding-left: 4rem;
+    position: relative;
+    top: -1.6rem;
+
+    p {
+      margin: 0;
+      line-height: 2.4rem;
+    }
+  }
+
+  &__buttons {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    align-self: self-start;
+    display: flex;
+    align-items: center;
+    gap: 4.3rem;
+    position: relative;
+    top: -3.15rem;
+
+    button:first-child {
+      width: 21.9rem;
+    }
+
+    button:nth-child(2) {
+      width: 15rem;
+      padding: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}
+
+/* 
+Van picture 
+*/
+.section-service__van {
+  @include background-contain-center;
+  background-image: url("/img/section-service/van-full.png");
+  width: 134.1rem;
+  height: 64.2rem;
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  position: relative;
+  top: 4rem;
+  right: -6.1rem;
+  transform: translateX(70%);
+}
+
+.section--1,
+.section--2,
+.section--3 {
+  height: 30rem;
+  width: 100%;
+  background-color: #888;
+}
