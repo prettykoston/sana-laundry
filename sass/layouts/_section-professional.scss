@@ -13,6 +13,10 @@
     grid-template-rows: repeat(2, min-content);
   }
 
+  @include respond(tab-portrait) {
+    height: 52.3rem;
+  }
+
   @include respond(phone) {
     row-gap: 1.6rem;
   }

@@ -14,6 +14,10 @@ body {
     font-size: var(--font-size-large-5);
     font-weight: 700;
     line-height: 4.2rem;
+
+    @include respond(phone) {
+      font-size: var(--font-size-medium-2);
+    }
   }
 }
 

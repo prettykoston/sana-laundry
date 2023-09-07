@@ -3,12 +3,24 @@ General, text and buttons
  */
 
 .section-service {
-    height: 60rem;
+  height: 60rem;
   display: grid;
   grid-template-columns: 61.7rem 1fr;
   grid-template-rows: repeat(3, max-content);
   overflow: hidden;
 
+  @include respond(tab-portrait) {
+    grid-template-columns: 48rem;
+    grid-template-rows: repeat(4, min-content);
+    row-gap: 4rem;
+    padding: 5.6rem 14rem 0 14rem;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 29rem;
+    padding: 3.45rem 1.2rem 0 1.2rem;
+    row-gap: 2.4rem;
+  }
   &__heading {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -16,8 +28,30 @@ General, text and buttons
     position: relative;
     top: -0.3rem;
 
-    span {
+    @include respond(tab-landscape) {
+      top: 0.9rem;
+      right: 0.1rem;
+    }
+
+    @include respond(tab-portrait) {
+      top: 0;
+      right: 0;
+      align-self: unset;
+    }
+
+    &--hit {
+      position: relative;
       font-weight: 500;
+
+      @include respond(tab-landscape) {
+        top: -0.2rem;
+        right: 0.1rem;
+      }
+
+      @include respond(phone) {
+        top: -0.3rem;
+        right: 0.05rem;
+      }
     }
   }
 
@@ -33,33 +67,89 @@ General, text and buttons
     position: relative;
     top: -1.6rem;
 
+    @include respond(tab-landscape) {
+      top: 0.2rem;
+      right: 0.2rem;
+      gap: 1.7rem;
+    }
+
+    @include respond(tab-portrait) {
+      top: 0;
+      right: 0;
+      align-self: unset;
+      padding-left: 0;
+    }
+
+    @include respond(phone) {
+      font-size: var(--font-size-small-1);
+      gap: 1.6rem;
+    }
+
     p {
       margin: 0;
       line-height: 2.4rem;
     }
   }
+}
 
-  &__buttons {
-    grid-column: 1 / 2;
-    grid-row: 3 / 4;
-    align-self: self-start;
-    display: flex;
-    align-items: center;
+/* 
+Buttons 
+*/
+.section-service__buttons {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  align-self: self-start;
+  display: flex;
+  align-items: center;
+  gap: 4.3rem;
+  position: relative;
+  top: -3.15rem;
+
+  @include respond(tab-landscape) {
+    gap: 4.4rem;
+    top: -0.5rem;
+    right: 0.3rem;
+  }
+
+  @include respond(tab-portrait) {
     gap: 4.3rem;
-    position: relative;
-    top: -3.15rem;
+    top: 0.1rem;
+    right: 0;
+  }
 
-    button:first-child {
-      width: 21.9rem;
-    }
+  @include respond(phone) {
+    flex-direction: column;
+    width: 29.55rem;
+    gap: 2.4rem;
+    top: 0rem;
+  }
 
-    button:nth-child(2) {
-      width: 15rem;
-      padding: 0;
+  button:first-child {
+    width: 21.9rem;
+
+    @include respond(phone) {
+      order: 2;
+      width: 100%;
+      background: var(--clr-blue-default);
+      color: var(--clr-white);
+      padding: 0.9rem 13.2rem 0.8rem 0.6rem;
 
       &::after {
-        display: none;
+        background-image: url("/img/common/button-arrow-white.svg");
       }
+    }
+  }
+
+  button:nth-child(2) {
+    width: 15rem;
+    padding: 0;
+
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    &::after {
+      display: none;
     }
   }
 }
@@ -77,13 +167,52 @@ Van picture
   position: relative;
   top: 4rem;
   right: -6.1rem;
-  transform: translateX(70%);
+  transform: translateX(80%);
+
+  @include respond(tab-landscape) {
+    right: 12.4rem;
+    top: 6.2rem;
+    width: 126rem;
+    height: 60.3rem;
+  }
+
+  @include respond(tab-portrait) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    width: 58.5rem;
+    height: 27.9rem;
+    right: 6.75rem;
+    top: -4.6rem;
+    transform: translateX(115%);
+  }
+
+  @include respond(phone) {
+    width: 34.2rem;
+    height: 16.3rem;
+    right: 2.4rem;
+    top: -2.4rem;
+  }
+}
+
+.section-service__circle {
+  z-index: -1;
+  width: 50.2rem;
+  height: 50.2rem;
+  position: absolute;
+  top: 6.7rem;
+  left: -11.8rem;
+  background-color: rgba(0, 0, 255, 0.5);
+
+  @include respond(phone) {
+    width: 18.7rem;
+    height: 18.7rem;
+  }
 }
 
 .section--1,
 .section--2,
 .section--3 {
-  height: 30rem;
-  width: 100%;
+  height: 100rem;
+  width: 60%;
   background-color: #888;
 }
