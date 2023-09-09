@@ -1,0 +1,14 @@
+.section-form {
+  background-image: linear-gradient(
+      to bottom,
+      transparent 40%,
+      var(--clr-grey-light-2) 40%
+    ),
+    url("/img/section-form/background.png");
+
+  height: 100rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "gsap": "^3.12.2",
+    "leaflet": "^1.9.4",
     "swiper": "^10.2.0"
   }
 }

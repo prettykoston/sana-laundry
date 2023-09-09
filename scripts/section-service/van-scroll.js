@@ -46,15 +46,15 @@ export default function initVan() {
       if (isTabLandscape) {
         const vanTabLandscape = gsap.timeline();
         vanTabLandscape
-          .to(vanPic, { x: "-5rem" })
-          .to(vanPic, { duration: ".1", rotation: "-0.5" })
-          .to(vanPic, { duration: ".1", rotation: "0" });
+          .to(vanPic, { x: "-5rem", duration: "1" })
+          .to(vanPic, { duration: ".2", rotation: "-0.5" })
+          .to(vanPic, { duration: ".2", rotation: "0" });
         ScrollTrigger.killAll();
         ScrollTrigger.create({
           animation: vanTabLandscape,
           trigger: serviceSection,
           start: "top center",
-          end: "+=800",
+          end: "bottom",
         });
       }
 
@@ -65,9 +65,9 @@ export default function initVan() {
         const vanTabPortrait = gsap.timeline();
 
         vanTabPortrait
-          .to(vanPic, { x: "2rem" })
-          .to(vanPic, { duration: ".1", rotation: "-0.5" })
-          .to(vanPic, { duration: ".1", rotation: "0" });
+          .to(vanPic, { x: "2rem", duration: "1" })
+          .to(vanPic, { duration: ".2", rotation: "-0.5" })
+          .to(vanPic, { duration: ".2", rotation: "0" });
 
         ScrollTrigger.killAll();
         ScrollTrigger.create({
@@ -85,15 +85,15 @@ export default function initVan() {
         const vanPhoneTl = gsap.timeline();
 
         vanPhoneTl
-          .to(vanPic, { x: "-.5rem" })
-          .to(vanPic, { duration: ".1", rotation: "-0.5" })
-          .to(vanPic, { duration: ".1", rotation: "0" });
+          .to(vanPic, { x: "-.5rem", duration: "1" })
+          .to(vanPic, { duration: ".2", rotation: "-0.5" })
+          .to(vanPic, { duration: ".2", rotation: "0" });
 
         ScrollTrigger.killAll();
         ScrollTrigger.create({
           animation: vanPhoneTl,
           trigger: serviceSection,
-          start: "top top",
+          start: "-=120",
           end: "bottom",
         });
       }

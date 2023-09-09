@@ -1,0 +1,123 @@
+.section-contacts {
+  height: 120rem;
+  background: rgba(250, 250, 250, 0.5);
+  padding: 0 17.2rem 0 0;
+  position: relative;
+  z-index: 3;
+
+  @include respond(tab-landscape) {
+    height: 92.3rem;
+  }
+
+  &__heading {
+    width: 61.6rem;
+    margin: 0 auto 1rem auto;
+    padding-top: 16rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    position: relative;
+    right: -7.5rem;
+
+    @include respond(tab-landscape) {
+      right: -8.5rem;
+    }
+
+    @include respond(tab-portrait) {
+      width: 46rem;
+      margin: 0 auto 4.7rem auto;
+      gap: 0.7rem;
+    }
+
+    @include respond(phone) {
+      width: 32rem;
+      margin: 0 auto 0rem auto;
+      padding: 0;
+      right: 0;
+      gap: 0.2rem;
+    }
+
+    p {
+      line-height: 2.4rem;
+
+      @include respond(phone) {
+        font-size: var(--font-size-small-1);
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  &__list-container {
+    display: grid;
+    grid-template-columns: 97.3rem 1fr;
+    grid-template-rows: 60rem;
+    column-gap: 1.6rem;
+
+    @include respond(tab-landscape) {
+      grid-template-columns: 65.1rem 1fr;
+      grid-template-rows: 53rem;
+    }
+
+    @include respond(tab-portrait) {
+      grid-template-columns: 78.1rem;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      overflow-y: scroll;
+      padding: 2.1rem 0 4.1rem 14.9rem;
+      scrollbar-color: var(--clr-blue-default) var(--clr-white);
+      scrollbar-width: thin;
+
+      @include respond(tab-landscape) {
+        padding: 2.1rem 0 4.1rem 9.4rem;
+        gap: 2.2rem;
+      }
+
+      @include respond(tab-portrait) {
+        padding: 0;
+      }
+
+      @include respond(phone) {
+        gap: 3.8rem;
+      }
+
+      &::-webkit-scrollbar {
+        width: 0.8rem;
+        background-color: var(--clr-white);
+        border-radius: 0.8rem;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        /* Foreground */
+        background: var(--clr-blue-default);
+        border-radius: 0.8rem;
+      }
+    }
+  }
+}
+
+#contacts-map {
+  width: 76rem;
+  height: 60rem;
+  border-radius: 5rem;
+  justify-self: self-end;
+  position: relative;
+  top: 3.7rem;
+  right: -0.1rem;
+
+  @include respond(tab-landscape) {
+    width: 49.1rem;
+    height: 46.2rem;
+    top: 4rem;
+  }
+
+  @include respond(tab-portrait) {
+    display: none;
+  }
+}

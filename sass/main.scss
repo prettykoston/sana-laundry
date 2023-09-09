@@ -12,13 +12,18 @@
 @import "components/cart";
 @import "components/buttons/btn_default";
 @import "components/buttons/btn-order-online";
+@import "components/contact-item";
 @import "components/services-drop-menu";
 @import "../node_modules/swiper/swiper.scss";
 @import "../node_modules/swiper/modules/navigation.scss";
 @import "../node_modules/swiper/modules/pagination.scss";
 @import "components/header-slider.scss";
+@import "../node_modules/leaflet/dist/leaflet.css";
+@import "components/form";
 
 @import "layouts/header";
 @import "layouts/section-about";
 @import "layouts/section-professional";
 @import "layouts/section-service";
+@import "layouts/section-contacts";
+@import "layouts/section-form";
