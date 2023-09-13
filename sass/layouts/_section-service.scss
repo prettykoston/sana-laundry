@@ -3,20 +3,25 @@ General, text and buttons
 */
 
 .section-service {
-  height: 60rem;
   display: grid;
   grid-template-columns: 61.7rem 1fr;
   grid-template-rows: repeat(3, max-content);
   overflow: hidden;
   position: relative;
-  padding-bottom: 4.6rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+
+
+  @include respond(tab-landscape) {
+    padding-bottom: 2.5rem;
+  }
 
   @include respond(tab-portrait) {
-    height: 57.7rem;
     grid-template-columns: 48rem;
     grid-template-rows: repeat(4, min-content);
+    height: 57.8rem;
     row-gap: 4rem;
-    padding: 5.6rem 14rem 0 14rem;
+    padding: 6rem 14rem 0 14rem;
   }
 
   @include respond(phone) {
@@ -32,8 +37,8 @@ General, text and buttons
     top: -0.3rem;
 
     @include respond(tab-landscape) {
-      top: 0.9rem;
-      right: 0.1rem;
+      top: -0.9rem;
+      right: 0.15rem;
     }
 
     @include respond(tab-portrait) {
@@ -71,9 +76,8 @@ General, text and buttons
     top: -1.6rem;
 
     @include respond(tab-landscape) {
-      top: 0.2rem;
+      top: -1.5rem;
       right: 0.2rem;
-      gap: 1.7rem;
     }
 
     @include respond(tab-portrait) {
@@ -107,11 +111,11 @@ Buttons
   align-items: center;
   gap: 4.3rem;
   position: relative;
-  top: -3.15rem;
+  top: -2.9rem;
 
   @include respond(tab-landscape) {
     gap: 4.4rem;
-    top: -0.5rem;
+    top: -2.3rem;
     right: 0.3rem;
   }
 
@@ -172,11 +176,11 @@ Van picture
   top: 4rem;
   right: -6.1rem;
   z-index: 5;
-  transform: translateX(80%);
+  // transform: translateX(80%);
 
   @include respond(tab-landscape) {
     right: 12.4rem;
-    top: 6.2rem;
+    top: 4.3rem;
     width: 126rem;
     height: 60.3rem;
   }
@@ -188,7 +192,7 @@ Van picture
     height: 27.9rem;
     right: 6.75rem;
     top: -4.9rem;
-    transform: translateX(115%);
+    // transform: translateX(115%);
   }
 
   @include respond(phone) {
@@ -213,14 +217,15 @@ Van picture
   background-color: var(--clr-blue-default);
 
   @include respond(tab-landscape) {
-    right: -48.9rem;
+    top: 4.1rem;
+    right: -48.8rem;
   }
 
   @include respond(tab-portrait) {
     width: 30rem;
     height: 30rem;
     right: 23.5rem;
-    top: 40.5rem;
+    top: 41rem;
   }
 
   @include respond(phone) {

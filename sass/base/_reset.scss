@@ -180,10 +180,48 @@ textarea {
   margin: 0; /* 2 */
 }
 
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+}
+
+/* Remove the stupid outer glow in Webkit */
+input:focus {
+  outline: 0;
+}
 /**
    * Show the overflow in IE.
    * 1. Show the overflow in Edge.
    */
+
+input,
+textarea {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 button,
 input {
@@ -242,26 +280,26 @@ button:-moz-focusring,
    */
 
 legend {
-    display: table;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+  display: table;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 
-    + * {
-        clear: both;
-    }
+  + * {
+    clear: both;
+  }
 }
 
 fieldset {
-    border: 0;
-    padding: 0.01em 0 0 0;
-    margin: 0;
-    min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
 }
 
 body:not(:-moz-handler-blocked) fieldset {
-    display: table-cell;
+  display: table-cell;
 }
 
 /**

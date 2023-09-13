@@ -85,7 +85,9 @@
                 безымянный печатник создал большую коллекцию размеров и форм
                 шрифтов.
               </p>
-              <button class="btn-default">Вызвать курьера</button>
+              <button class="btn-default header-slider__button">
+                Вызвать курьера
+              </button>
               <div
                 class="header-slider__slide-img header-slider__slide-img--1"></div>
               <div class="header-slider__slide-bubbles-shape"></div>
@@ -448,35 +450,105 @@
     <section class="section-form">
       <div class="form-wrapper">
         <form class="form">
-          <fieldset class="form-field">
-            <legend class="form-field__heading">
+          <fieldset class="form-user-info">
+            <legend class="form-user-info__heading">
               <h3 class="blue-text">Закажите химчистку с доставкой!</h3>
             </legend>
 
             <input
-              class="form-field__name"
+              class="form-user-info__name"
               type="text"
               placeholder="Ваше имя фамилия*"
               required />
 
             <input
-              class="form-field__tel"
+              class="form-user-info__tel"
               type="tel"
               placeholder="Телефон*"
               required />
 
             <input
-              class="form-field__email"
+              class="form-user-info__email"
               type="email"
               placeholder="E-mail" />
 
             <input
-              class="form-field__comment"
+              class="form-user-info__comment"
               type="text"
               placeholder="Ваш комментарий" />
           </fieldset>
+
+          <fieldset class="form-urgent-buttons">
+            <div>
+              <input
+                type="radio"
+                value="urgent"
+                id="urgent"
+                name="urgent-button" />
+              <label for="urgent">Срочно</label>
+            </div>
+
+            <div>
+              <input
+                type="radio"
+                value="not-urgent"
+                id="not-urgent"
+                name="urgent-button" />
+              <label for="not-urgent">Не срочно</label>
+            </div>
+          </fieldset>
+
+          <button class="btn-default">Заказать</button>
+
+          <p>
+            Нажимая на кнопку «Заказать», вы даёте своё согласие на обработку
+            персональных данных согласно
+            <a href="#/">политике конфиденциальности</a>
+          </p>
         </form>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer-nav-container">
+        <a href="#/" class="footer-nav-container__logo"></a>
+
+        <ul class="footer-nav-container__services-list">
+          <li>Услуги</li>
+          <li><a href="#/">Одежда</a></li>
+          <li><a href="#/">Аксессуары</a></li>
+          <li><a href="#/">Домашний интерьер</a></li>
+          <li><a href="#/">Обувь</a></li>
+          <li><a href="#/">Особые услуги</a></li>
+        </ul>
+
+        <ul class="footer-nav-container__nav-list">
+          <li><a href="#/">Акции</a></li>
+          <li><a href="#/">Магазин</a></li>
+          <li><a href="#/">О компании</a></li>
+          <li><a href="#/">Контакты</a></li>
+        </ul>
+
+        <div class="footer-nav-container__phone">
+          <a href="tel:88001234567">8 (800) 123-45-67</a>
+          <span>Горячая линия</span>
+        </div>
+
+        <div class="btn-order-online footer-nav-container__order-button">
+          <span>Заказать on-line</span>
+          <span>заберём за три часа</span>
+          <div class="phone-icon phone-icon--medium"></div>
+        </div>
+      </div>
+
+      <div class="footer-copyright-container">
+        <div class="footer-copyright-container__text">
+          <p>2023 Химчистка Сана. Все права защищены.</p>
+          <p>Политика обработки персональных данных</p>
+        </div>
+
+        <div class="footer-copyright-container__studio-logo"></div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -125,6 +125,8 @@
 
     @include respond(tab-landscape) {
       top: 6.02rem;
+      width: 21.6rem;
+      padding: 0.6rem 6rem 0.8rem 1.6rem;
     }
 
     @include respond(tab-portrait) {
@@ -150,7 +152,7 @@
     top: 0.4rem;
 
     @include respond(tab-landscape) {
-      right: 7.6rem;
+      right: 7.9rem;
       top: 6.1rem;
       background-size: cover;
       height: 43.2rem;
@@ -180,5 +182,3 @@
     font-style: normal;
   }
 }
-
-

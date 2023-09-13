@@ -1,12 +1,16 @@
 .section-contacts {
-  height: 120rem;
+  height: 112.2rem;
   background: rgba(250, 250, 250, 0.5);
   padding: 0 17.2rem 0 0;
   position: relative;
   z-index: 3;
 
   @include respond(tab-landscape) {
-    height: 92.3rem;
+    height: 89.8rem;
+  }
+
+  @include respond(tab-portrait) {
+    height: 85.2rem;
   }
 
   &__heading {
@@ -24,12 +28,14 @@
 
     @include respond(tab-landscape) {
       right: -8.5rem;
+      padding-top: 13.4rem;
     }
 
     @include respond(tab-portrait) {
       width: 46rem;
       margin: 0 auto 4.7rem auto;
       gap: 0.7rem;
+      padding-top: 4rem;
     }
 
     @include respond(phone) {
@@ -85,6 +91,7 @@
 
       @include respond(phone) {
         gap: 3.8rem;
+        max-width: 100vw;
       }
 
       &::-webkit-scrollbar {

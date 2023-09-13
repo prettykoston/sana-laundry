@@ -1,14 +1,20 @@
 .section-form {
   background-image: linear-gradient(
       to bottom,
-      transparent 40%,
-      var(--clr-grey-light-2) 40%
+      transparent 54.6%,
+      var(--clr-grey-light-2) 50%
     ),
     url("/img/section-form/background.png");
 
-  height: 100rem;
-
+  height: 73.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+
+  @include respond(tab-portrait) {
+    height: 65.7rem;
+    align-items: start;
+    padding-top: 5rem;
+  }
 }

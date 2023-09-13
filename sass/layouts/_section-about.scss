@@ -5,13 +5,11 @@ General, pictures and download button
 .section-about {
   height: 76.1rem;
   position: relative;
-
   display: grid;
   grid-template-columns: 59rem 1fr;
   column-gap: 21rem;
   padding-top: 9.4rem;
-
-  box-shadow: 0px 16px 4px -16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
 
   @include respond(tab-landscape) {
     grid-template-columns: 17.6rem 1fr;
@@ -21,7 +19,7 @@ General, pictures and download button
   @include respond(tab-portrait) {
     height: 63.4rem;
     grid-template-columns: 1fr;
-    padding: 7.9rem 13rem 0 8.96rem;
+    padding: 7.8rem 14.5rem 0 10rem;
   }
 
   @include respond(phone) {
@@ -109,6 +107,11 @@ General, pictures and download button
       right: -3.8rem;
     }
 
+    @include respond(tab-portrait) {
+      top: -0.34rem;
+      right: -4rem;
+    }
+
     @include respond(phone) {
       top: -1.1rem;
       right: 0;
@@ -184,6 +187,9 @@ Text block
       left: 3.8rem;
     }
 
+    @include respond(tab-portrait) {
+      left: 4rem;
+    }
     @include respond(phone) {
       left: 0;
       text-align: center;
