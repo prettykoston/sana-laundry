@@ -10,6 +10,7 @@ General, pictures and download button
   column-gap: 21rem;
   padding-top: 9.4rem;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 
   @include respond(tab-landscape) {
     grid-template-columns: 17.6rem 1fr;

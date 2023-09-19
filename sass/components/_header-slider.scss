@@ -54,6 +54,11 @@
     position: relative;
     background: url("/img/header/slider/bullet-inactive.svg");
     margin: var(--swiper-pagination-bullet-vertical-gap, 20px) 0 !important;
+
+    @include respond(tab-portrait) {
+      margin: var(--swiper-pagination-bullet-vertical-gap, 8px) 0 !important;
+      right: 0.65rem;
+    }
   }
 
   &__nav-buttons {

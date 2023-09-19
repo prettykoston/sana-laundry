@@ -3,9 +3,7 @@
   grid-template-columns: 151rem;
   grid-template-rows: repeat(3, min-content);
   row-gap: 4rem;
-
   padding: 4.8rem 3.2rem;
-  z-index: 2;
   background-color: var(--clr-white);
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
   border-radius: 5.6rem;
@@ -17,14 +15,13 @@
 
   @include respond(tab-portrait) {
     grid-template-columns: 68.2rem;
-    padding-bottom: 6rem;
-
+    padding: 4.8rem 3.2rem 10rem 3.2rem;
   }
 
   @include respond(phone) {
     grid-template-columns: 26.45rem;
     height: 65.2rem;
-    padding: 3.2rem 1.6rem;
+    padding: 3.2rem 1.6rem 6rem 1.6rem;
     border-radius: 2.4rem;
   }
 
@@ -75,6 +72,7 @@
 
     font-size: var(--font-size-medium-2);
     text-align: center;
+    white-space: nowrap;
 
     @include respond(phone) {
       position: relative;
@@ -83,6 +81,7 @@
       font-size: var(--font-size-medium-3);
       line-height: 2.8rem;
       letter-spacing: 0.4px;
+      white-space: normal;
     }
   }
 
@@ -93,9 +92,11 @@
     padding-left: 2.4rem;
     border-radius: 2.4rem;
     box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
-    border: none;
+    -webkit-box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
     position: relative;
     color: var(--clr-blue-dark);
+    appearance: none;
+    -webkit-appearance: none;
 
     &::placeholder {
       font-weight: 300;
@@ -105,6 +106,7 @@
 
   &__name {
     grid-column: 1 / 2;
+    grid-row: 2 / 3;
     top: 0.3rem;
 
     @include respond(phone) {
@@ -114,6 +116,8 @@
 
   &__tel {
     grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
     top: 0.1rem;
     @include respond(phone) {
       top: 0.2rem;
@@ -122,6 +126,7 @@
 
   &__email {
     grid-column: 1 / 2;
+    grid-row: 4 / 5;
 
     @include respond(phone) {
       top: -0.25rem;

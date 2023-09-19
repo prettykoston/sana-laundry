@@ -315,9 +315,11 @@ Fourth bubble
   @include respond(tab-portrait) {
     top: 0;
   }
+}
 
-  /*   @include respond(phone) {
-    right: 0;
-    left: 0;
-  } */
+.section-professional__white-text {
+  color: var(--clr-white);
+  @include respond(tab-portrait) {
+    color: inherit;
+  }
 }
