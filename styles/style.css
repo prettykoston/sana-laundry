@@ -1382,7 +1382,6 @@ body {
     top: 16.9rem;
     left: 5.35rem;
     content: url("/img/header/slider/button-arrow.svg");
-    height: 4rem;
     width: 4rem; }
     @media only screen and (max-width: 79.6875em) {
       .header-slider__prev {
@@ -1402,7 +1401,6 @@ body {
     left: 4.95rem;
     top: 39.3rem;
     content: url("/img/header/slider/button-arrow.svg");
-    height: 4rem;
     width: 4rem; }
     @media only screen and (max-width: 79.6875em) {
       .header-slider__next {
