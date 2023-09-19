@@ -11,7 +11,6 @@ General, text and buttons
   padding-bottom: 0.5rem;
   box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
 
-
   @include respond(tab-landscape) {
     padding-bottom: 2.5rem;
   }
@@ -26,6 +25,7 @@ General, text and buttons
 
   @include respond(phone) {
     grid-template-columns: 29rem;
+    height: 52.2rem;
     padding: 3.45rem 1.2rem 0 1.2rem;
     row-gap: 2.4rem;
   }
@@ -176,7 +176,7 @@ Van picture
   top: 4rem;
   right: -6.1rem;
   z-index: 5;
-  // transform: translateX(80%);
+  transform: translateX(80%);
 
   @include respond(tab-landscape) {
     right: 12.4rem;
@@ -192,7 +192,7 @@ Van picture
     height: 27.9rem;
     right: 6.75rem;
     top: -4.9rem;
-    // transform: translateX(115%);
+    transform: translateX(115%);
   }
 
   @include respond(phone) {

@@ -1,5 +1,6 @@
 .section-professional {
   height: 72.3rem;
+  padding-top: 9.3rem;
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: 1fr;
@@ -12,6 +13,7 @@
   @include respond(tab-landscape) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, min-content);
+    padding-top: 0;
   }
 
   @include respond(tab-portrait) {
@@ -20,6 +22,7 @@
 
   @include respond(phone) {
     row-gap: 1.6rem;
+    height: 47.15rem;
   }
 
   &__heading {
@@ -30,6 +33,7 @@
     font-size: var(--font-size-large-1);
     font-weight: 700;
     line-height: 6.4rem;
+    z-index: 5;
 
     white-space: nowrap;
     @include respond(tab-landscape) {
@@ -95,13 +99,12 @@
   &__circle-shape {
     background-color: var(--clr-blue-default);
     border-radius: 50%;
-
     width: 50.2rem;
     height: 50.2rem;
     position: absolute;
-    top: 6.7rem;
+    top: 15.7rem;
     left: -11.8rem;
-    background-color: rgba(0, 0, 255, 1);
+    background-color: var(--clr-blue-default);
 
     @include respond(tab-landscape) {
       top: 11.9rem;
@@ -113,7 +116,6 @@
       left: -20.5rem;
       width: 41.2rem;
       height: 42.7rem;
-
       display: none;
     }
   }

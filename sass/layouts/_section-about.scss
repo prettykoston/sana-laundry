@@ -3,7 +3,7 @@ General, pictures and download button
 */
 
 .section-about {
-  height: 76.1rem;
+  height: 66.9rem;
   position: relative;
   display: grid;
   grid-template-columns: 59rem 1fr;
@@ -28,29 +28,27 @@ General, pictures and download button
   }
 
   &__circle-shape {
-    @include background-contain-center;
-    background-image: url("/img/section-solutions/circle-big.svg");
-
+    background-color: var(--clr-grey-light-3);
+    border-radius: 50%;
     width: 73.2rem;
     height: 73.2rem;
     position: absolute;
-
-    top: 5rem;
+    top: 7.2rem;
     left: 6.8rem;
 
     @include respond(tab-landscape) {
       width: 52rem;
       height: 52rem;
-      top: 10.4rem;
-      left: -13.1rem;
+      top: 11.8rem;
+      left: -1.2rem;
     }
 
     &--1 {
       @include respond(tab-portrait) {
-        width: 36.2rem;
-        height: 36.2rem;
-        top: -1rem;
-        left: -26.5rem;
+        width: 37.2rem;
+        height: 37.2rem;
+        top: -0.7rem;
+        left: -26.3rem;
       }
     }
 
@@ -59,14 +57,10 @@ General, pictures and download button
 
       @include respond(tab-portrait) {
         display: block;
-        display: none;
-
-        background-size: cover;
-        top: 43.8rem;
-        left: 59.8rem;
+        top: 43.5rem;
+        left: 61rem;
         width: 36.2rem;
-        height: 27.6rem;
-        background-position: top;
+        height: 36.6rem;
       }
 
       @include respond(phone) {
