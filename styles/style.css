@@ -1353,10 +1353,10 @@ body {
     right: 0.3rem;
     position: relative;
     background: url("/img/header/slider/bullet-inactive.svg");
-    margin: var(--swiper-pagination-bullet-vertical-gap, 20px) 0 !important; }
+    margin: 2rem 0 !important; }
     @media only screen and (max-width: 48em) {
       .header-slider__bullet-inactive {
-        margin: var(--swiper-pagination-bullet-vertical-gap, 8px) 0 !important;
+        margin: 1.9rem 0 !important;
         right: 0.65rem; } }
   .header-slider__nav-buttons {
     position: absolute;
